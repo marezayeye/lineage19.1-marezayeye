@@ -1,0 +1,35 @@
+LineageOS 19.1
+===========
+Build instructions for miatoll (Poco M2 Pro / Redmi Note 9S / Redmi Note 9 Pro Global / Redmi Note 9 Pro India / Redmi Note 9 Pro Max / Redmi Note 10 Lite )
+```
+cd ~
+mkdir android/lineage
+cd android/lineage
+repo init -u https://github.com/marezayeye/lineage-19.1.git -b 19.1 --git-lfs
+```
+Then to sync up:
+```
+repo sync
+source build/envsetup.sh
+```
+Then you need to add device specific code, you can use original lineage device tree,it fails on first run and you need to extract propriety files from a device running lineage-19.1 or a lineage-19.1 flashable zip and then rerun breakfast command.
+
+```
+breakfast miatoll
+```
+as an alternative, you can use my device tree
+```
+mkdir ~/android/lineage/vendor/xiaomi/miatoll && cd "$_" && git clone https://github.com/marezayeye/vendor_xiaomi_miatoll.git
+mkdir ~/android/lineage/vendor/xiaomi/sm6250-common && cd "$_" && git clone https://github.com/marezayeye/vendor_xiaomi_sm6250-common.git
+mkdir ~/android/lineage/device/xiaomi/miatoll && cd "$_" && git clone https://github.com/marezayeye/device_xiaomi_miatoll.git
+mkdir ~/android/lineage/device/xiaomi/miatoll && cd "$_" && git clone https://github.com/marezayeye/device_xiaomi_sm6250-common.git
+mkdir ~/android/lineage/kernel/xiaomi/sm6250 && cd "$_" && git clone https://github.com/LineageOS/android_kernel_xiaomi_sm6250.git -b lineage-19.1
+breakfast miatoll
+```
+starting build
+```
+cd ~/android/lineage
+croot
+brunch miatoll
+```
+you can find flashable zip in ~/android/lineage/out/product/miatoll
