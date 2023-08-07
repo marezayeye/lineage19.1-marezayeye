@@ -22,7 +22,7 @@ as an alternative, you can use my device tree
 mkdir ~/android/lineage/vendor/xiaomi/miatoll && cd "$_" && git clone https://github.com/marezayeye/vendor_xiaomi_miatoll.git
 mkdir ~/android/lineage/vendor/xiaomi/sm6250-common && cd "$_" && git clone https://github.com/marezayeye/vendor_xiaomi_sm6250-common.git
 mkdir ~/android/lineage/device/xiaomi/miatoll && cd "$_" && git clone https://github.com/marezayeye/device_xiaomi_miatoll.git
-mkdir ~/android/lineage/device/xiaomi/miatoll && cd "$_" && git clone https://github.com/marezayeye/device_xiaomi_sm6250-common.git
+mkdir ~/android/lineage/device/xiaomi/sm6250-common && cd "$_" && git clone https://github.com/marezayeye/device_xiaomi_sm6250-common.git
 mkdir ~/android/lineage/kernel/xiaomi/sm6250 && cd "$_" && git clone https://github.com/LineageOS/android_kernel_xiaomi_sm6250.git -b lineage-19.1
 breakfast miatoll
 ```
